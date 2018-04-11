@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/activity_back"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/llAdContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id"
+            android:id="@+id/adView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/llConfirmExit"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/value_5"
+        android:layout_marginLeft="@dimen/value_10"
+        android:layout_marginRight="@dimen/value_10"
+        android:layout_marginTop="@dimen/value_10"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:text="Do You Want to Exit ?"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/value_30"
+            android:layout_marginRight="@dimen/value_30"
+            android:layout_marginTop="@dimen/value_5"
+            android:layout_width="250dp">
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:background="@drawable/yes_bg"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/btnyes"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:paddingBottom="@dimen/value_10"
+                    android:paddingTop="@dimen/value_10"
+                    android:text="YES"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/value_15"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:background="@drawable/no_bg"
+                    android:gravity="center"
+                    android:id="@+id/btnNo"
+                    android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:paddingBottom="@dimen/value_10"
+                    android:paddingTop="@dimen/value_10"
+                    android:text="NO"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/value_15"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:background="@drawable/circle"
+                android:gravity="center"
+                android:id="@+id/tt_Rate"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="100dp"
+                android:layout_width="100dp"
+                android:text="Rate Us"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/value_18"
+                android:textStyle="bold" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/cenetrlaput"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:scrollbarSize="2dp" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+    </FrameLayout>
+</LinearLayout>
